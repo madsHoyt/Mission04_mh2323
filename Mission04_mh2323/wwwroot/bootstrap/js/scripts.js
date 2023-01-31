@@ -18,39 +18,39 @@ $("#btnSend").click(function () {
         code = "A";
     }
     else if (grade >= 90) {
-        code = "A-"
+        code = "A-";
     }
     else if (grade >= 87) {
-        code = "B+"
+        code = "B+";
     }
     else if (grade >= 84) {
-        code = "B"
+        code = "B";
     }
     else if (grade >= 80) {
-        code = "B-"
+        code = "B-";
     }
     else if (grade >= 77) {
-        code = "C+"
+        code = "C+";
     }
     else if (grade >= 74) {
-        code = "C"
+        code = "C";
     }
     else if (grade >= 70) {
-        code = "C-"
+        code = "C-";
     }
     else if (grade >= 67) {
-        code = "D+"
+        code = "D+";
     }
     else if (grade >= 64) {
-        code = "D"
+        code = "D";
     }
     else if (grade >= 60) {
-        code = "D-"
+        code = "D-";
     }
     else {
-        code = "E"
+        code = "E";
     }
     //Display grade code and percentage
-    $('#finalGrade1').html("Grade: " + code)
-    $('#finalGrade2').html("Percentage: " + grade + "%")
+    $('#finalGrade1').html("Grade: " + code);
+    $('#finalGrade2').html("Percentage: " + grade + "%");
 })
