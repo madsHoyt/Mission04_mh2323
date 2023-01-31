@@ -11,7 +11,7 @@ $("#btnSend").click(function () {
     let grade = ($('#assign').val() * .50) + ($('#project').val() * .10) + ($('#quiz').val() * .10) + ($('#midterm').val() * .10) + ($('#final').val() * .10) + ($('#intex').val() * .10);
 
     //Initialize grade code
-    var code = "A"
+    var code = "A";
 
     //Calculate grade code
     if (grade >= 94) {
