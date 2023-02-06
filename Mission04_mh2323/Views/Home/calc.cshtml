@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    This page uses Razor viewData to have dynamic values for things in the shared _Layout.cshtml file
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+    ViewData["H1"] = "Grade Calculator";
+    ViewData["H2"] = "Calculate grade for IS 413";
+    ViewData["Button"] = "Calcultor";
+    ViewData["ScrollButton"] = "#calculator";
+}
+@model Mission04_mh2323.Models.calcModel;
+
+<section id="calculator">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="~/img/Untitled design (3).png" alt="..." /></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5">
+
+                    <!--*************-->
+                    <!--Grade Calculator-->
+                    <!--Includes asp-validation to output errors in inputs-->
+                    <!--Form uses post to submit info-->
+                    <h2 class="display-4">Grade Calculator</h2>
+                    <form method="post">
+
+                        <!--All of the different inputs for the calculator-->
+                        <label>Assignments</label>
+                        <input id="assign" asp-for="Assignment" class="form-control" />
+                        <span asp-validation-for="Assignment" class="text-danger"></span>
+                        <br />
+
+                        <label>Group Project</label>
+                        <input id="project" asp-for="GroupProject" class="form-control" />
+                        <span asp-validation-for="GroupProject" class="text-danger"></span>
+                        <br />
+
+                        <label>Quizzes</label>
+                        <input id="quiz" asp-for="Quiz" class="form-control" />
+                        <span asp-validation-for="Quiz" class="text-danger"></span>
+                        <br />
+
+                        <label>Midterm Exam</label>
+                        <input id="midterm" asp-for="Midterm" class="form-control" />
+                        <span asp-validation-for="Midterm" class="text-danger"></span>
+                        <br />
+
+                        <label>Final Exam</label>
+                        <input id="final" asp-for="Final" class="form-control" />
+                        <span asp-validation-for="Final" class="text-danger"></span>
+                        <br />
+
+                        <label>INTEX</label>
+                        <input id="intex" asp-for="Intex" class="form-control" />
+                        <span asp-validation-for="Intex" class="text-danger"></span>
+                        <br />
+
+                        <label id="finalGrade1">Final Grade</label>
+                        <br />
+                        <label id="finalGrade2"></label>
+                        <br />
+
+                        <!--Submit button to submit post-->
+                        <center>
+                            <input id="btnSend" type="submit" value="Calculate" class="btn btn-primary btn-xl rounded-pill mt-5" />
+                        </center>
+
+                    </form>              
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
